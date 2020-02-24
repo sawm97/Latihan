@@ -1,7 +1,4 @@
-# Test Push Github
-test push github
+# Repo Latihan 
+Ini khusus buat latihan dan iseng2 coding
 
-## Test Update  
-test update
-
-Update di Repo Latihan Purwadhika
+Sangat meneriman masukan :)
