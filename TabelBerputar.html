@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Berputar</title>
+    <style>
+        table, td, th{
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+    <script defer src="TabelBerputar.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend>Pengatur Putaran</legend>
+        <p>Arah putaran : <input type="radio" name="arah" id="kiri">kiri <input type="radio" name="arah" id="kanan">kanan</p>
+        <p>Jumlah putaran : <input type="number" id="jumlah"></p>
+        <input type="button" value="Putar!">
+    </fieldset>
+    <fieldset>
+        <Legend>Tabel</Legend>
+        <Table>
+            <tr>
+                <td><center>1</center></td>
+                <td><center>2</center></td>
+                <td><center>3</center></td>
+                <td><center>4</center></td>
+                <td><input type="button" value="sort"></td>
+            </tr>
+            <tr>
+                <td><center>5</center></td>
+                <td><center>6</center></td>
+                <td><center>7</center></td>
+                <td><center>8</center></td>
+                <td><input type="button" value="sort"></td>
+            </tr>
+            <tr>
+                <td><center>9</center></td>
+                <td><center>10</center></td>
+                <td><center>11</center></td>
+                <td><center>12</center></td>
+                <td><input type="button" value="sort"></td>
+            </tr>
+            <tr>
+                <td><center>13</center></td>
+                <td><center>14</center></td>
+                <td><center>15</center></td>
+                <td><center>16</center></td>
+                <td><input type="button" value="sort"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="sort"></td>
+                <td><input type="button" value="sort"></td>
+                <td><input type="button" value="sort"></td>
+                <td><input type="button" value="sort"></td>
+                <td></td>
+            </tr>
+        </Table>
+    </fieldset>
+</body>
+</html>

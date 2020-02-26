@@ -37,6 +37,5 @@ var fnClick = () => {
             ssRes += "<td>&nbsp;_&nbsp;<br>|_|<br>&nbsp;_|</td>"
         }
     }
-
     document.getElementById("render").innerHTML = ssRes
 }
