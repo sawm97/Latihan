@@ -7,6 +7,12 @@ var arrProduct = [
 
 var arrCategory = ["All", "Fast Food", "Electronic", "Cloth", "Fruit"];
 
+var arrCatInput = ["Fast Food", "Electronic", "Cloth", "Fruit"]
+
+var buttonSortAZ = 0
+
+var buttonSortLowHigh = 0
+
 var arrCart = []
 
 arrProduct.sort()
@@ -15,16 +21,16 @@ arrProduct.sort()
 var funRenderList = (data, idx) => {
     // Mapping product
     var resProduct = data.map((obj) => {
-        let SortNormal = (a , b) => {
-            if (a.price < b.price){
-                return -1
-            } else if (b.price < a.price){
-                return 1
-            } else {
-                return 0
-            }
-        }
-        data.sort(SortNormal)
+        // let SortNormal = (a , b) => {
+        //     if (a.price < b.price){
+        //         return -1
+        //     } else if (b.price < a.price){
+        //         return 1
+        //     } else {
+        //         return 0
+        //     }
+        // }
+        // data.sort(SortNormal)
         // jika id product sama dengan idx
         if(obj.id == idx){
             // Textbox
@@ -91,11 +97,15 @@ var funRenderList = (data, idx) => {
     var resCategory = arrCategory.map((val) => {
         return `<option>${val}</option>`
     })
+    // Mapping input category
+    var resCatInput = arrCatInput.map((val) => {
+        return `<option>${val}</option>`
+    })
     // render product
     document.getElementById('render').innerHTML = resProduct.join("")
     // render category
     document.getElementById('catFilter').innerHTML = resCategory
-    document.getElementById('catInput').innerHTML = resCategory
+    document.getElementById('catInput').innerHTML = resCatInput
 }
 
 // Render Cart
@@ -422,6 +432,71 @@ var funPromo = () => {
         `<p><input type="button" value="Promo" onclick="funPromo()"></p>`   
     } else {
         alert(`Maaf kode yang anda pakai salah`)
+    }
+}
+
+var funAZ = (a, b) => {
+    if(a.name < b.name){
+        return -1
+    } else if (a.name > b.name){
+        return 1
+    } else {
+        return 0
+    }
+}
+
+var funZA = (a, b) => {
+    if(a.name > b.name){
+        return -1
+    } else if (a.name < b.name){
+        return 1
+    } else {
+        return 0
+    }
+
+}
+
+var funSortAZ = () => {
+    if (buttonSortAZ == 0){
+        arrProduct.sort(funAZ)
+        funRenderList(arrProduct)
+        buttonSortAZ = 1
+    } else {
+        arrProduct.sort(funZA)
+        funRenderList(arrProduct)
+        buttonSortAZ = 0
+    }
+}
+
+var funLowHigh = (a, b) => {
+    if(a.price < b.price){
+        return -1
+    } else if (a.price > b.price){
+        return 1
+    } else {
+        return 0
+    }
+}
+
+var funHighLow = (a, b) => {
+    if(a.price > b.price){
+        return -1
+    } else if (a.price < b.price){
+        return 1
+    } else {
+        return 0
+    }
+}
+
+var funSortLowHigh = () => {
+    if (buttonSortLowHigh == 0){
+        arrProduct.sort(funLowHigh)
+        funRenderList(arrProduct)
+        buttonSortLowHigh = 1
+    } else {
+        arrProduct.sort(funHighLow)
+        funRenderList(arrProduct)
+        buttonSortLowHigh = 0
     }
 }
 

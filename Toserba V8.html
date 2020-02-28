@@ -14,8 +14,10 @@
                 padding: 10px;
             }
         </style>
+        <script src="https://kit.fontawesome.com/257b698ccf.js" crossorigin="anonymous"></script>
 
         <script defer src="./IndexV8.js"></script>
+        <link rel="stylesheet" href="IndexV8.css">
 
     </head>
 
@@ -40,8 +42,8 @@
             <!-- SORT -->
             <fieldset>
                 <legend>Sort By</legend>
-                <p>Name : <input type="button" onclick="funSortAZ()" value="A-Z"><input type="button" onclick="funSortZA()" value="Z-A"></p>
-                <p>Price : <input type="button" onclick="funSortLowHigh()" value="Low - High"><input type="button" onclick="funSortHighLow()" value="High - Low"></p>
+                <p>Name : <input type="button" onclick="funSortAZ()" value="A-Z or Z-A"></p>
+                <p>Price : <input type="button" onclick="funSortLowHigh()" value="Low - High or High - Low"></p>
             </fieldset>
 
             <!-- INPUT -->
@@ -69,7 +71,7 @@
                     <thead>
                         <th>Id</th>
                         <th>Category</th>
-                        <th>Nama</th>
+                        <th>Nama<i class="fas fa-exchange-alt" onclick="funSortAZ()"> </i> </th>
                         <th>Price</th>
                         <th>Stock</th>
                         <th>Buy</th>
@@ -110,6 +112,7 @@
             </fieldset>
 
         </form>
+        <h4 class="fas fa-exchange-alt"></h4>
 
     </body>
 

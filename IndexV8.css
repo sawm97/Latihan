@@ -1,0 +1,11 @@
+.fa-exchange-alt{
+    transform: rotate(90deg);
+    
+}
+.fa-exchange-alt:hover{
+    color: blue;
+    
+}
+.fa-exchange-alt:active{
+    color: red;
+}
