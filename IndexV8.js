@@ -435,6 +435,7 @@ var funPromo = () => {
     }
 }
 
+// Button Sort A-Z dan sebaliknya
 var funAZ = (a, b) => {
     if(a.name < b.name){
         return -1
@@ -467,7 +468,9 @@ var funSortAZ = () => {
         buttonSortAZ = 0
     }
 }
+// Button Sort A-Z dan sebaliknya 
 
+// Button Sort Low - High dan sebaliknya
 var funLowHigh = (a, b) => {
     if(a.price < b.price){
         return -1
@@ -499,6 +502,7 @@ var funSortLowHigh = () => {
         buttonSortLowHigh = 0
     }
 }
+// Button Sort Low - High dan sebaliknya
 
 funRenderList(arrProduct)
 
