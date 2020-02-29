@@ -24,6 +24,8 @@ var fnRenderList = (data) => {
             </tr>`
         }
     })
+    // for (var i = 0 ; i < arrNum.length ; i++){
+    // }
     document.getElementById("render").innerHTML = resProduct.join("")
 }
 
