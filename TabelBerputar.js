@@ -33,4 +33,8 @@ var fnRenderList = () => {
     document.getElementById("render").innerHTML = resProduct
 }
 
+var fnPutar = () => {
+    document.querySelector()
+}
+
 fnRenderList()
