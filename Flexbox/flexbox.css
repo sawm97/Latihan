@@ -1,0 +1,86 @@
+body {
+    background-color: darkgrey;
+}
+
+/* 
+    box-sizing : content-box
+    'width' = lebar konten + lebar padding
+
+    width: 300px
+    padding : 10px
+
+    lebar konten : 300px
+    lebar padding : 20px
+    result : 320px
+    
+    box-sizing : border-box
+    'width' = lebar konten sudah termasuk lebar padding juga
+
+    width: 300px
+    padding : 10px
+
+    lebar konten : 280px
+    lebar padding : 20px
+    result : 300px
+ */
+
+/* Container Pertama */
+.container-1 {
+    display: flex;
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container-1 div {
+    padding: 7px;
+}
+
+.main {
+    flex: 2;
+    order: 2;
+}
+
+.side-1 {
+    flex: 1;
+    order: 1;
+}
+
+.side-2 {
+    flex: 1;
+    order: 3;
+}
+
+/* Container Kedua */
+.container-2 {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.feature {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.feature:nth-child(1) {
+    background-color: cornsilk;
+}
+
+.feature:nth-child(2) {
+    background-color: crimson;
+}
+
+.feature:nth-child(3) {
+    background-color: darkcyan;
+}
+
+@media(min-width: 900px) {
+    .container-2 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .feature {
+        width: 30%;
+    }
+}
