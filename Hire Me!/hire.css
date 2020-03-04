@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: azure;
+}
+
+.container {
+    font-size: 1.5em;
+    display: grid;
+}
+
+.navbar {
+    background-image: linear-gradient(to right,
+    rgb(7, 211, 201),
+    rgb(56, 235, 101),
+    rgb(179, 238, 69)
+    );
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+nav li {
+    /* Menghilangkan default style dari li : titik hitam */
+    list-style: none;
+    /* atas bawah : 1 kali besar font, kanan kiri : 0 */
+    padding: 1em 0;
+}
+
+nav li a {
+    color: white;
+    font-weight: 700;
+    /* Menghilangkan default style dari tag anchor, underscore */
+    text-decoration: none;
+    /* transparansi : 0 - 1 , 0 hilang , 1 full */
+    opacity: 0.7;
+    /* waktu transisi dari transaparan menuju full */
+    transition: 1s;
+}
+
+nav li a:hover {
+    opacity: 1;
+}
